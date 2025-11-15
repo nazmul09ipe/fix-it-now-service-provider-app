@@ -60,7 +60,7 @@ const AddService = () => {
 
         // ✅ Redirect user after adding service
         setTimeout(() => {
-          navigate("/dashboard/manageServices"); 
+          navigate("/services"); 
         }, 1200);
 
       } else {
