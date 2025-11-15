@@ -2,7 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import PageTitle from './../Shared/PageTitle';
 
 const BookService = () => {
   const { id } = useParams();
@@ -100,7 +101,7 @@ const BookService = () => {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex justify-center items-start px-4 pt-12 pb-16">
-      <Toaster position="top-center" />
+    <PageTitle PageTitle="Book Service" />
 
       <motion.form
         onSubmit={handleSubmit}

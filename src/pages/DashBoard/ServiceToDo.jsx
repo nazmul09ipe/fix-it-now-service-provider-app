@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
+import toast  from "react-hot-toast";
 import Loading from "../../Components/Loading";
 import PageTitle from './../Shared/PageTitle';
 
@@ -59,7 +59,7 @@ const ServiceToDo = () => {
   return (
     <div className="p-8 min-h-screen bg-gray-50 dark:bg-gray-900">
       <PageTitle title="Service To-Do" />
-      <Toaster position="top-center" />
+      
 
       <h1 className="text-3xl font-bold text-gray-700 dark:text-white text-center mb-8">
         Service To Do

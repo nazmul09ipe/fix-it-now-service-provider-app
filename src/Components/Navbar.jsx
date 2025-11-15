@@ -11,6 +11,7 @@ import logo from "../assets/logo2.png";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
+
 // Smooth underline animation
 const underlineVariants = {
   initial: { width: 0, opacity: 0 },
@@ -38,7 +39,7 @@ const LinkUnderline = ({ children, onClick, isActive }) => (
       <motion.span
         variants={underlineVariants}
         transition={{ duration: 0.28, ease: "easeOut" }}
-        className="absolute left-0 bottom-0 h-[2px] bg-primary rounded-full"
+        className="absolute left-0 bottom-0 h-2px bg-primary rounded-full"
       />
     </motion.span>
   </div>
@@ -100,7 +101,7 @@ const Navbar = () => {
       dark:border-gray-700/50"
     >
       <div className="flex justify-between items-center h-24 px-4 md:px-8">
-
+      
         {/* LOGO */}
         <div
           className="flex items-center gap-4 cursor-pointer"

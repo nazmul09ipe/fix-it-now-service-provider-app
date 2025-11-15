@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import PageTitle from './../Shared/PageTitle';
 
@@ -60,7 +60,7 @@ const AddService = () => {
   return (
     <div className="min-h-screen pt-28 sm:pt-28 bg-linear-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex justify-center items-start px-4 pb-10">
       <PageTitle title="Add Service" />
-      <Toaster position="top-center" />
+      
 
       <motion.form
         onSubmit={handleSubmit}

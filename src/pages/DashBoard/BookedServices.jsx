@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import Loading from "../../Components/Loading";
+import PageTitle from './../Shared/PageTitle';
 
 const BookedServices = () => {
   const { user, api } = useContext(AuthContext);
@@ -35,8 +36,8 @@ const BookedServices = () => {
 
   return (
     <div className="p-8 min-h-screen bg-gray-50 dark:bg-gray-900">
-     <PageTitle title="Booked Service" />
-      <Toaster position="top-center" />
+     <PageTitle PageTitle="Booked Service" />
+      
       <h1 className="text-3xl font-bold text-gray-700 dark:text-white text-center mb-8">
         Your Booked Services
       </h1>

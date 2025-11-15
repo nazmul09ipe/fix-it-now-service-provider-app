@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useState } from "react";
 import PageTitle from "../pages/Shared/PageTitle";
 
