@@ -2,10 +2,13 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
-import PageTitle from './../Shared/PageTitle';
+import { useNavigate } from "react-router";   // <-- ADD THIS
+import PageTitle from "./../Shared/PageTitle";
 
 const AddService = () => {
   const { user, api } = useContext(AuthContext);
+  const navigate = useNavigate(); // <-- ADD THIS
+
   const [service, setService] = useState({
     name: "",
     price: "",
@@ -39,7 +42,7 @@ const AddService = () => {
 
       if (res.status === 201) {
         toast.success("Service added successfully!", {
-          duration: 2500,
+          duration: 2000,
           style: {
             background: "#16a34a",
             color: "white",
@@ -47,7 +50,19 @@ const AddService = () => {
           },
         });
 
-        setService({ name: "", price: "", area: "", description: "", image: "" });
+        setService({
+          name: "",
+          price: "",
+          area: "",
+          description: "",
+          image: "",
+        });
+
+        // ✅ Redirect user after adding service
+        setTimeout(() => {
+          navigate("/dashboard/manageServices"); 
+        }, 1200);
+
       } else {
         toast.error("Failed to add service");
       }
@@ -60,7 +75,6 @@ const AddService = () => {
   return (
     <div className="min-h-screen pt-28 sm:pt-28 bg-linear-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex justify-center items-start px-4 pb-10">
       <PageTitle title="Add Service" />
-      
 
       <motion.form
         onSubmit={handleSubmit}
