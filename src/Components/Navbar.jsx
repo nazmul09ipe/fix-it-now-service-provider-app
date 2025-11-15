@@ -39,7 +39,7 @@ const LinkUnderline = ({ children, onClick, isActive }) => (
       <motion.span
         variants={underlineVariants}
         transition={{ duration: 0.28, ease: "easeOut" }}
-        className="absolute left-0 bottom-0 h-2px bg-primary rounded-full"
+        className="absolute left-0 bottom-0 h-[2px] bg-primary rounded-full"
       />
     </motion.span>
   </div>
