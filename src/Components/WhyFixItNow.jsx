@@ -6,7 +6,7 @@ const WhyFixItNow = () => {
   return (
     <section className="bg-linear-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-6">
       <div className="max-w-5xl mx-auto text-center">
-        {/* Section Header */}
+     
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,6 @@ const WhyFixItNow = () => {
           Why <span className="text-gray-700 dark:text-blue-400">FixItNow</span>?
         </motion.h2>
 
-        {/* Fresh paragraph 1 */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -32,7 +31,7 @@ const WhyFixItNow = () => {
           reliable results without the usual stress, mess, or miscommunication.
         </motion.p>
 
-        {/* Fresh paragraph 2 */}
+      
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -48,7 +47,7 @@ const WhyFixItNow = () => {
         </motion.p>
       </div>
 
-      {/* Feature Icons */}
+   
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
