@@ -11,7 +11,7 @@ const PopularServices = () => {
   useEffect(() => {
     fetch("http://localhost:5000/services")
       .then((res) => res.json())
-      .then((data) => setServices(data.slice(0, 6))) // show only 6
+      .then((data) => setServices(data.slice(0, 6))) 
       .catch((err) => console.error("Error fetching services:", err));
   }, []);
 
@@ -26,7 +26,7 @@ const PopularServices = () => {
 
   return (
     <section className="bg-linear-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-14 px-4">
-      {/* Header */}
+   
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ const PopularServices = () => {
         </p>
       </motion.div>
 
-      {/* Services Grid */}
+     
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {services.map((service, index) => (
           <motion.div
@@ -57,7 +57,7 @@ const PopularServices = () => {
             whileHover={{ scale: 1.02 }}
             className="bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl rounded-2xl overflow-hidden flex flex-col sm:flex-row transition-all duration-300"
           >
-            {/* Image */}
+          
             <div className="sm:w-2/5 w-full h-52 sm:h-auto overflow-hidden">
               <img
                 src={service.image}
@@ -66,7 +66,7 @@ const PopularServices = () => {
               />
             </div>
 
-            {/* Info */}
+          
             <div className="flex flex-col justify-between p-6 sm:w-3/5">
               <div>
                 <h3 className="text-xl font-bold text-gray-600 dark:text-white mb-2">
@@ -78,7 +78,7 @@ const PopularServices = () => {
                 </p>
               </div>
 
-              {/* Footer (Provider & Price) */}
+           
               <div className="flex items-center justify-between mt-4">
                 <div className="flex items-center gap-3">
                   {service.providerImage ? (
@@ -100,7 +100,7 @@ const PopularServices = () => {
                 </p>
               </div>
 
-              {/* Button */}
+            
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
@@ -114,7 +114,6 @@ const PopularServices = () => {
         ))}
       </div>
 
-      {/* View All Services Button */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
