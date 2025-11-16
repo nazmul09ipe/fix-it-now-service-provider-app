@@ -12,15 +12,15 @@ import { auth } from "../../firebase.config";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-// ----------------- Auth Context -----------------
+// Auth Context
 export const AuthContext = createContext();
 
-// ----------------- AuthProvider -----------------
+//AuthProvider 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ----------------- Firebase Auth Methods -----------------
+  // Firebase Auth Methods 
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -42,7 +42,7 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // ----------------- Listen to Auth Changes -----------------
+  // Listen to Auth Changes 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
@@ -51,7 +51,7 @@ export function AuthProvider({ children }) {
     return () => unsubscribe();
   }, []);
 
-  // ----------------- Axios Instance with JWT -----------------
+  //  Axios Instance with JWT 
   const api = useMemo(() => {
     const instance = axios.create({
       baseURL: "http://localhost:5000",
@@ -84,7 +84,7 @@ export function AuthProvider({ children }) {
     return instance;
   }, []);
 
-  // ----------------- Context Value -----------------
+  // Context Value 
   const value = {
     user,
     loading,
@@ -98,7 +98,7 @@ export function AuthProvider({ children }) {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
-// ----------------- Custom Hook -----------------
+// Custom Hook 
 export const useApi = () => {
   const { api } = useContext(AuthContext);
   return api;
