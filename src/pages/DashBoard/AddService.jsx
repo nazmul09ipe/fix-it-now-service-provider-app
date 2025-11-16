@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router";   // <-- ADD THIS
+import { useNavigate } from "react-router";  
 import PageTitle from "./../Shared/PageTitle";
 
 const AddService = () => {
   const { user, api } = useContext(AuthContext);
-  const navigate = useNavigate(); // <-- ADD THIS
+  const navigate = useNavigate();
 
   const [service, setService] = useState({
     name: "",
@@ -58,7 +58,7 @@ const AddService = () => {
           image: "",
         });
 
-        // ✅ Redirect user after adding service
+       
         setTimeout(() => {
           navigate("/services"); 
         }, 1200);
