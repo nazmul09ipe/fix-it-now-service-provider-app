@@ -6,7 +6,7 @@ import { FaMoon } from "react-icons/fa";
 import { IoHomeOutline, IoMenu, IoClose } from "react-icons/io5";
 import { AuthContext } from "../AuthContext/AuthProvider";
 import { motion, AnimatePresence } from "framer-motion";
-import { toast } from "react-hot-toast";
+
 import logo from "../assets/logo2.png";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
@@ -87,7 +87,7 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logOut();
-    toast.success("Logged out successfully!");
+    
     navigate("/auth/login");
   };
 
