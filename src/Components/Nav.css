@@ -14,7 +14,7 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  background: linear-linear(to right, #3b82f6, #8b5cf6);
   transition: width 0.3s ease-in-out;
 }
 
