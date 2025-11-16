@@ -11,7 +11,7 @@ const ServiceToDo = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch bookings for the provider
+ 
   useEffect(() => {
     if (!user?.email) return;
 
@@ -33,7 +33,7 @@ const ServiceToDo = () => {
     fetchBookings();
   }, [user,api]);
 
-  // Handle status update
+ 
   const handleStatusChange = async (id, newStatus) => {
     try {
       const res = await api.patch(`/bookings/${id}`, {
@@ -106,7 +106,7 @@ const ServiceToDo = () => {
                   <strong>Price:</strong> ৳{booking.price}
                 </p>
 
-                {/* Status Dropdown */}
+          
                 <div className="mt-3">
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Service Status

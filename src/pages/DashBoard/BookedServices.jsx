@@ -16,7 +16,7 @@ const BookedServices = () => {
     const fetchBookings = async () => {
       try {
         const res = await api.get("/bookings");
-        // Filter by current user's email
+       
         const userBookings = res.data.filter(
           (b) => b.customerEmail === user.email
         );
