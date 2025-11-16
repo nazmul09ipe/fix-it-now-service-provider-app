@@ -8,13 +8,13 @@ function Terms() {
     <div className="min-h-screen bg-linear-to-br from-green-50 to-green-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500 py-10 px-5 sm:px-10 lg:px-24">
       <PageTitle title="Terms and Conditions"></PageTitle>
 
-      {/* Page Header */}
+      
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-orange-800 dark:text-orange-400 text-center mb-10">
         FixItNow – Terms and Conditions
       </h1>
 
       <div className="max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-8 sm:p-10 space-y-8 transition-colors duration-500">
-        {/* Effective Date & Intro */}
+     
         <section className="text-center">
           <p className="text-base font-medium mb-1 text-gray-700 dark:text-gray-300">
             Effective Date: July 2025
@@ -30,7 +30,7 @@ function Terms() {
           </p>
         </section>
 
-        {/* Terms Sections */}
+      
         <section>
           <h3 className="font-bold mb-2 text-gray-900 dark:text-gray-100">1. About FixItNow</h3>
           <p className="text-gray-700 dark:text-gray-300">
