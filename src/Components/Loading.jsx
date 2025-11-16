@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Loading = () => {
-  // Dot bounce animation
+ 
   const dotVariants = {
     animate: {
       y: [0, -12, 0],
@@ -14,7 +14,7 @@ const Loading = () => {
     },
   };
 
-  // Spinner rotation animation
+  
   const spinnerVariants = {
     animate: {
       rotate: 360,
@@ -28,10 +28,10 @@ const Loading = () => {
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center bg-white dark:bg-gray-900 relative overflow-hidden">
-      {/* Soft background glow */}
+     
       <div className="absolute w-[300px] h-[300px] bg-cyan-400/20 dark:bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
 
-      {/* Glowing Spinner */}
+    
       <motion.div
         className="relative w-16 h-16 sm:w-20 sm:h-20 border-4 border-cyan-400 border-t-transparent rounded-full mb-8 shadow-[0_0_20px_rgba(34,211,238,0.4)] dark:shadow-[0_0_25px_rgba(34,211,238,0.5)]"
         variants={spinnerVariants}
@@ -40,7 +40,7 @@ const Loading = () => {
         <div className="absolute inset-0 rounded-full blur-sm bg-cyan-400/30 dark:bg-cyan-500/20" />
       </motion.div>
 
-      {/* Bouncing Dots */}
+  
       <div className="flex gap-3">
         {[0, 1, 2].map((i) => (
           <motion.div
@@ -53,7 +53,7 @@ const Loading = () => {
         ))}
       </div>
 
-      {/* Loading Text */}
+   
       <motion.p
         className="mt-6 text-cyan-700 dark:text-cyan-300 text-lg sm:text-xl font-semibold tracking-wide"
         initial={{ opacity: 0 }}
