@@ -19,7 +19,10 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/messages", {
+      const res = await fetch("https://assignment-11-server-side-vert.vercel.app/messages",
+
+
+ {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

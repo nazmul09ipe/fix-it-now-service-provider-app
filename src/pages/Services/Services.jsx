@@ -8,7 +8,7 @@ import Loading from "../../Components/Loading";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 
 const Services = () => {
-  const { api } = useContext(AuthContext); // Axios instance with JWT
+  const { api } = useContext(AuthContext); 
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await api.get("/services"); // Axios GET with JWT
+        const res = await api.get("/services");
         setServices(res.data);
       } catch (err) {
         console.error("Error fetching services:", err);

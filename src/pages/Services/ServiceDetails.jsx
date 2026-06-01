@@ -12,7 +12,9 @@ const ServiceDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://assignment-11-server-side-vert.vercel.app
+
+/services/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setService(data);

@@ -5,17 +5,16 @@ import Loading from "../../Components/Loading";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 
 const ServiceSearch = () => {
-  const { api } = useContext(AuthContext); // Use Axios with JWT
+  const { api } = useContext(AuthContext);
   const [services, setServices] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filtered, setFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch all services
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await api.get("/services"); // Axios with JWT
+        const res = await api.get("/services"); 
         setServices(res.data);
       } catch (err) {
         console.error("Error fetching services:", err);
@@ -26,7 +25,6 @@ const ServiceSearch = () => {
     fetchServices();
   }, [api]);
 
-  // Filter services by search text
   useEffect(() => {
     if (searchText.trim() === "") {
       setFiltered([]);
@@ -41,7 +39,7 @@ const ServiceSearch = () => {
 
   if (loading) return <Loading />;
 
-  // Highlight matched text
+  
   const highlightText = (text, query) => {
     const parts = text.split(new RegExp(`(${query})`, "gi"));
     return parts.map((part, i) =>
@@ -62,7 +60,7 @@ const ServiceSearch = () => {
 
   return (
     <div className="relative w-full max-w-3xl mx-auto my-12">
-      {/* Search Input */}
+     
       <motion.div
         className="flex items-center gap-3 bg-white dark:bg-gray-800 shadow-xl rounded-full px-5 py-3 border-2 border-gray-300 dark:border-gray-700 focus-within:border-blue-500 transition-all duration-300"
         initial={{ opacity: 0, y: -10 }}
@@ -79,7 +77,7 @@ const ServiceSearch = () => {
         />
       </motion.div>
 
-      {/* Search Results Dropdown */}
+      
       <AnimatePresence>
         {searchText && (
           <motion.div

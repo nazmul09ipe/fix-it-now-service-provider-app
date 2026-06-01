@@ -54,7 +54,9 @@ export function AuthProvider({ children }) {
   //  Axios Instance with JWT 
   const api = useMemo(() => {
     const instance = axios.create({
-      baseURL: "http://localhost:5000",
+      baseURL: import.meta.env.VITE_API_URL,
+
+
     });
 
     // Attach JWT token to requests
