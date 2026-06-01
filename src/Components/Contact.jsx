@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://assignment-11-server-side-vert.vercel.app/messages",
+      const res = await fetch("https:///messages",
 
 
  {

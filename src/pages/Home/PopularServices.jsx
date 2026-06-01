@@ -9,7 +9,7 @@ const PopularServices = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://assignment-11-server-side-vert.vercel.app/services")
+    fetch("https://https://fix-it-now-service-app-server-side-g8yru2enj.vercel.app/services")
 
 
 
